@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  uptimekuma:
+    image: louislam/uptime-kuma
+    container_name: uptimekuma
+    volumes:
+      - uptime-kuma:/app/data
+    networks:
+      - deploying_odoo_17_default
+
+volumes:
+  uptime-kuma:
+
